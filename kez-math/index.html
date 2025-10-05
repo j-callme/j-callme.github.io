@@ -1,173 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kez Math</title>
-  <meta name="description" content="Research by j-_">
-  <link rel="icon" href="data:,">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kez Math</title>
+    <meta name="description" content="Research by j-_" />
+    <link rel="icon" href="data:," />
 
-  <style>
-    /* THEME COLORS */
-    :root {
-      --bg: #0b0d10;
-      --paper: #12161b;
-      --ink: #e7edf3;
-      --muted: #a8b3c1;
-      --accent: #6ee7ff;
-      --accent-2: #a78bfa;
-      --rule: rgba(255,255,255,.12);
-    }
-    @media (prefers-color-scheme: light) {
+    <style>
+      /* THEME COLORS */
       :root {
-        --bg:#f6f8fb; --paper:#ffffff; --ink:#0e1620; --muted:#596676;
-        --accent:#0ea5e9; --accent-2:#7c3aed; --rule: rgba(0,0,0,.08);
+        --bg: #0b0d10;
+        --paper: #12161b;
+        --ink: #e7edf3;
+        --muted: #a8b3c1;
+        --accent: #6ee7ff;
+        --accent-2: #a78bfa;
+        --rule: rgba(255, 255, 255, 0.12);
       }
-    }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f8fb;
+          --paper: #ffffff;
+          --ink: #0e1620;
+          --muted: #596676;
+          --accent: #0ea5e9;
+          --accent-2: #7c3aed;
+          --rule: rgba(0, 0, 0, 0.08);
+        }
+      }
 
-    /* GLOBAL */
-    * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; }
-    body {
-      background:
-        radial-gradient(900px 400px at 20% -10%, rgba(110,231,255,.10), transparent 60%),
-        radial-gradient(800px 360px at 110% 0%, rgba(167,139,250,.10), transparent 60%),
-        var(--bg);
-      color: var(--ink);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
-      font-size: 16px;
-    }
+      /* GLOBAL */
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        background: radial-gradient(
+            900px 400px at 20% -10%,
+            rgba(110, 231, 255, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            800px 360px at 110% 0%,
+            rgba(167, 139, 250, 0.1),
+            transparent 60%
+          ),
+          var(--bg);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.7;
+        font-size: 16px;
+      }
 
-    /* STRUCTURE */
-    .wrap { max-width: 940px; margin: 40px auto; padding: 0 24px; }
-    header {
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
-      margin-bottom: 20px; color: var(--muted); font-size: 14px;
-    }
-    .brand { font-weight: 800; color: var(--ink); letter-spacing: .3px; }
+      /* STRUCTURE */
+      .wrap {
+        max-width: 940px;
+        margin: 40px auto;
+        padding: 0 24px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .brand {
+        font-weight: 800;
+        color: var(--ink);
+        letter-spacing: 0.3px;
+      }
 
-    /* PAPER BLOCK */
-    .paper {
-      background: var(--paper);
-      border: 1px solid var(--rule);
-      border-radius: 18px;
-      padding: clamp(24px, 5vw, 48px);
-      box-shadow: 0 20px 60px rgba(0,0,0,.25);
-    }
-    h1 {
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.1;
-      margin: 0 0 10px;
-      letter-spacing: .2px;
-    }
-    h2 {
-      font-size: clamp(20px, 2.6vw, 30px);
-      margin-top: 28px;
-      margin-bottom: 8px;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 4px;
-    }
-    h3 {
-      font-size: 20px;
-      margin: 20px 0 8px;
-      color: var(--accent);
-    }
-    p { margin: 10px 0; }
+      /* PAPER BLOCK */
+      .paper {
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 18px;
+        padding: clamp(24px, 5vw, 48px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+      }
+      h1 {
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.1;
+        margin: 0 0 10px;
+        letter-spacing: 0.2px;
+      }
+      h2 {
+        font-size: clamp(20px, 2.6vw, 30px);
+        margin-top: 28px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 4px;
+      }
+      h3 {
+        font-size: 20px;
+        margin: 20px 0 8px;
+        color: var(--accent);
+      }
+      p {
+        margin: 10px 0;
+      }
 
-    .byline {
-      color: var(--muted);
-      margin-bottom: 24px;
-      font-size: 14px;
-    }
+      .byline {
+        color: var(--muted);
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
 
-    .abstract {
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border: 1px solid var(--rule);
-      border-radius: 14px;
-      padding: 16px 18px;
-      margin: 16px 0 24px;
-      font-size: 15px;
-    }
+      .abstract {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        padding: 16px 18px;
+        margin: 16px 0 24px;
+        font-size: 15px;
+      }
 
-    .toc {
-      font-size: 14px;
-      color: var(--muted);
-      margin: 8px 0 24px;
-    }
-    .toc a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .toc a:hover { text-decoration: underline; }
+      .toc {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 8px 0 24px;
+      }
+      .toc a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .toc a:hover {
+        text-decoration: underline;
+      }
 
-    .note {
-      font-size: 14px;
-      color: var(--muted);
-      border-left: 3px solid var(--accent);
-      padding: 8px 12px;
-      background: rgba(110,231,255,.08);
-      border-radius: 8px;
-      margin: 14px 0;
-    }
+      .note {
+        font-size: 14px;
+        color: var(--muted);
+        border-left: 3px solid var(--accent);
+        padding: 8px 12px;
+        background: rgba(110, 231, 255, 0.08);
+        border-radius: 8px;
+        margin: 14px 0;
+      }
 
-    .figure {
-      background: rgba(255,255,255,.03);
-      border: 1px dashed var(--rule);
-      border-radius: 12px;
-      padding: 14px;
-      margin: 16px 0;
-    }
-    .caption {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 6px;
-      font-style: italic;
-    }
+      .figure {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px dashed var(--rule);
+        border-radius: 12px;
+        padding: 14px;
+        margin: 16px 0;
+      }
+      .caption {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 6px;
+        font-style: italic;
+      }
 
-    /* FOOTER */
-    .foot {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+      /* FOOTER */
+      .foot {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
-    @media print {
-      body { background: #fff; color: #000; }
-      .paper { box-shadow: none; border-color: #ddd; }
-      a { color: #000; text-decoration: underline; }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand">Kez Math</div>
-      <div>by <strong>j-_</strong> · Updated for Patch 6.79e</div>
-    </header>
+      @media print {
+        body {
+          background: #fff;
+          color: #000;
+        }
+        .paper {
+          box-shadow: none;
+          border-color: #ddd;
+        }
+        a {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">Kez Math</div>
+        <div>by <strong>j-_</strong> · Updated for Patch 6.79e</div>
+      </header>
 
-    <article class="paper">
-      <h1>On Calculations Surrounding Kez</h1>
-      <div class="byline">Author: <strong>j-_</strong> · <span id="date"></span></div>
+      <article class="paper">
+        <h1>On Calculations Surrounding Kez</h1>
+        <div class="byline">
+          Author: <strong>j-_</strong> · <span id="date"></span>
+        </div>
 
-      <section class="abstract">
-        We explore attack speed and DPS calculations regarding Kez and his abilities.
-      </section>
+        <section class="abstract">
+          We explore attack speed and DPS calculations regarding Kez and his
+          abilities.
+        </section>
 
-      <nav class="toc">
-        <strong>Contents:</strong>
-        <a href="#intro">Intro</a> ·
-        <a href="#terms">Terminology</a> ·
-        <a href="#model">Base Model</a> ·
-        <a href="#next">Next Steps</a>
-      </nav>
+        <nav class="toc">
+          <strong>Contents:</strong>
+          <a href="#intro">Intro</a> · <a href="#terms">Terminology</a> ·
+          <a href="#model">Base Model</a> ·
+          <a href="#next">Next Steps</a>
+        </nav>
 
-<!--       <section id="intro">
+        <!--       <section id="intro">
         <h2>1. Introduction</h2>
         <p>
           These notes aim for an elegant balance between scientific clarity and readability.
@@ -176,57 +226,68 @@
         </p>
       </section> -->
 
-      <section id="terms">
-        <h2>Terminology & Assumptions</h2>
-        <p>
-          We define the following terms    
-        </p>        
-        <ul>
-          <li><strong>AD</strong> — Attack Damage</li>
-          <li><strong>BAT</strong> — Base Attack Time</li>
-          <li><strong>AS</strong> — Total Attack Speed (</li>
-          <li><strong>AF</strong> — Attack speed factor used in scaling equations</li>
-        </ul>
-        <p class="note">
-          As of patch 6.79e, we consider these default values
-        </p>
-      </section>
+        <section id="terms">
+          <h2>Terminology & Assumptions</h2>
+          <p>We define the following terms</p>
+          <ul>
+            <li><strong>AD</strong> — Attack Damage</li>
+            <li><strong>BAT</strong> — Base Attack Time</li>
+            <li><strong>AS</strong> — Total Attack Speed (</li>
+            <li>
+              <strong>AF</strong> — Attack speed factor used in scaling
+              equations
+            </li>
+          </ul>
+          <p class="note">
+            As of patch 6.79e, we consider these default values
+          </p>
+        </section>
 
-      <section id="model">
-        <h2>3. Base Model (placeholder)</h2>
-        <p>
-          The attack cycle is governed primarily by <em>Base Attack Time</em> (BAT) and the effective
-          <em>Attack Speed</em> multiplier (AS). Once KaTeX support is enabled, this section will express
-          DPS as a function of these variables and visualize them with a dynamic graph.
-        </p>
+        <section id="model">
+          <h2>3. Base Model (placeholder)</h2>
+          <p>
+            The attack cycle is governed primarily by
+            <em>Base Attack Time</em> (BAT) and the effective
+            <em>Attack Speed</em> multiplier (AS). Once KaTeX support is
+            enabled, this section will express DPS as a function of these
+            variables and visualize them with a dynamic graph.
+          </p>
 
-        <div class="figure">
-          <div>(figure placeholder) Chart or interactive simulation will appear here.</div>
-          <div class="caption">Figure 1: DPS response curve placeholder.</div>
-        </div>
-      </section>
+          <div class="figure">
+            <div>
+              (figure placeholder) Chart or interactive simulation will appear
+              here.
+            </div>
+            <div class="caption">Figure 1: DPS response curve placeholder.</div>
+          </div>
+        </section>
 
-      <section id="next">
-        <h2>4. Next Steps</h2>
-        <ol>
-          <li>Integrate KaTeX for mathematical expressions.</li>
-          <li>Add interactive sliders and a chart.</li>
-          <li>Publish the first mechanic: Falcon Rush DPS comparison with neutral points.</li>
-        </ol>
-      </section>
-    </article>
+        <section id="next">
+          <h2>4. Next Steps</h2>
+          <ol>
+            <li>Integrate KaTeX for mathematical expressions.</li>
+            <li>Add interactive sliders and a chart.</li>
+            <li>
+              Publish the first mechanic: Falcon Rush DPS comparison with
+              neutral points.
+            </li>
+          </ol>
+        </section>
+      </article>
 
-    <div class="foot">
-      <span>© <span id="y"></span> <strong>j-_</strong></span>
-      <span>Kez Math · Research notes</span>
+      <div class="foot">
+        <span>© <span id="y"></span> <strong>j-_</strong></span>
+        <span>Kez Math · Research notes</span>
+      </div>
     </div>
-  </div>
 
-  <script>
-    const d = new Date();
-    document.getElementById('y').textContent = d.getFullYear();
-    document.getElementById('date').textContent =
-      d.toLocaleDateString(undefined, {year:'numeric', month:'long', day:'numeric'});
-  </script>
-</body>
+    <script>
+      const d = new Date();
+      document.getElementById("y").textContent = d.getFullYear();
+      document.getElementById("date").textContent = d.toLocaleDateString(
+        undefined,
+        { year: "numeric", month: "long", day: "numeric" }
+      );
+    </script>
+  </body>
 </html>
