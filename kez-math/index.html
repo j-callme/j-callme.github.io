@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kez Math — Dota Mechanics Notes</title>
-  <meta name="description" content="Dota 2 mechanics research by j-_">
+  <title>Kez Math</title>
+  <meta name="description" content="Research by j-_">
   <link rel="icon" href="data:,">
 
   <style>
@@ -148,17 +148,15 @@
   <div class="wrap">
     <header>
       <div class="brand">Kez Math</div>
-      <div>by <strong>j-_</strong> · Dota 2 Mechanics</div>
+      <div>by <strong>j-_</strong> · Updated for Patch 6.79e</div>
     </header>
 
     <article class="paper">
-      <h1>Toward a Clear Model of Dota 2 Attack Mechanics</h1>
+      <h1>On Calculations Surrounding Kez</h1>
       <div class="byline">Author: <strong>j-_</strong> · <span id="date"></span></div>
 
       <section class="abstract">
-        <strong>Abstract —</strong> This document explores Dota 2 attack mechanics using a quantitative lens.
-        It defines terminology, assumptions, and models that will later support dynamic graphs and interactive
-        simulations directly within the article.
+        We explore attack speed and DPS calculations regarding Kez and his abilities.
       </section>
 
       <nav class="toc">
@@ -169,26 +167,28 @@
         <a href="#next">Next Steps</a>
       </nav>
 
-      <section id="intro">
+<!--       <section id="intro">
         <h2>1. Introduction</h2>
         <p>
           These notes aim for an elegant balance between scientific clarity and readability.
           The structure mimics a short research paper while remaining approachable for content creators
           and players who want to understand the math behind Dota 2 combat.
         </p>
-      </section>
+      </section> -->
 
       <section id="terms">
-        <h2>2. Terminology & Assumptions</h2>
+        <h2>Terminology & Assumptions</h2>
+        <p>
+          We define the following terms    
+        </p>        
         <ul>
           <li><strong>AD</strong> — Attack Damage</li>
           <li><strong>BAT</strong> — Base Attack Time</li>
-          <li><strong>AS</strong> — Attack Speed multiplier</li>
+          <li><strong>AS</strong> — Total Attack Speed (</li>
           <li><strong>AF</strong> — Attack speed factor used in scaling equations</li>
         </ul>
         <p class="note">
-          The precise implementation of animation cycles, batching, and floating-point timing will be addressed
-          alongside the equations in later drafts.
+          As of patch 6.79e, we consider these default values
         </p>
       </section>
 
@@ -218,7 +218,7 @@
 
     <div class="foot">
       <span>© <span id="y"></span> <strong>j-_</strong></span>
-      <span>Kez Math · Ongoing research notes</span>
+      <span>Kez Math · Research notes</span>
     </div>
   </div>
 
