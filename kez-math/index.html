@@ -63,4 +63,170 @@
       letter-spacing: .2px;
     }
     h2 {
-      font-siz
+      font-size: clamp(20px, 2.6vw, 30px);
+      margin-top: 28px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 4px;
+    }
+    h3 {
+      font-size: 20px;
+      margin: 20px 0 8px;
+      color: var(--accent);
+    }
+    p { margin: 10px 0; }
+
+    .byline {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+
+    .abstract {
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin: 16px 0 24px;
+      font-size: 15px;
+    }
+
+    .toc {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 8px 0 24px;
+    }
+    .toc a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .toc a:hover { text-decoration: underline; }
+
+    .note {
+      font-size: 14px;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding: 8px 12px;
+      background: rgba(110,231,255,.08);
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+
+    .figure {
+      background: rgba(255,255,255,.03);
+      border: 1px dashed var(--rule);
+      border-radius: 12px;
+      padding: 14px;
+      margin: 16px 0;
+    }
+    .caption {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    /* FOOTER */
+    .foot {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media print {
+      body { background: #fff; color: #000; }
+      .paper { box-shadow: none; border-color: #ddd; }
+      a { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Kez Math</div>
+      <div>by <strong>j-_</strong> · Dota 2 Mechanics</div>
+    </header>
+
+    <article class="paper">
+      <h1>Toward a Clear Model of Dota 2 Attack Mechanics</h1>
+      <div class="byline">Author: <strong>j-_</strong> · <span id="date"></span></div>
+
+      <section class="abstract">
+        <strong>Abstract —</strong> This document explores Dota 2 attack mechanics using a quantitative lens.
+        It defines terminology, assumptions, and models that will later support dynamic graphs and interactive
+        simulations directly within the article.
+      </section>
+
+      <nav class="toc">
+        <strong>Contents:</strong>
+        <a href="#intro">Intro</a> ·
+        <a href="#terms">Terminology</a> ·
+        <a href="#model">Base Model</a> ·
+        <a href="#next">Next Steps</a>
+      </nav>
+
+      <section id="intro">
+        <h2>1. Introduction</h2>
+        <p>
+          These notes aim for an elegant balance between scientific clarity and readability.
+          The structure mimics a short research paper while remaining approachable for content creators
+          and players who want to understand the math behind Dota 2 combat.
+        </p>
+      </section>
+
+      <section id="terms">
+        <h2>2. Terminology & Assumptions</h2>
+        <ul>
+          <li><strong>AD</strong> — Attack Damage</li>
+          <li><strong>BAT</strong> — Base Attack Time</li>
+          <li><strong>AS</strong> — Attack Speed multiplier</li>
+          <li><strong>AF</strong> — Attack speed factor used in scaling equations</li>
+        </ul>
+        <p class="note">
+          The precise implementation of animation cycles, batching, and floating-point timing will be addressed
+          alongside the equations in later drafts.
+        </p>
+      </section>
+
+      <section id="model">
+        <h2>3. Base Model (placeholder)</h2>
+        <p>
+          The attack cycle is governed primarily by <em>Base Attack Time</em> (BAT) and the effective
+          <em>Attack Speed</em> multiplier (AS). Once KaTeX support is enabled, this section will express
+          DPS as a function of these variables and visualize them with a dynamic graph.
+        </p>
+
+        <div class="figure">
+          <div>(figure placeholder) Chart or interactive simulation will appear here.</div>
+          <div class="caption">Figure 1: DPS response curve placeholder.</div>
+        </div>
+      </section>
+
+      <section id="next">
+        <h2>4. Next Steps</h2>
+        <ol>
+          <li>Integrate KaTeX for mathematical expressions.</li>
+          <li>Add interactive sliders and a chart.</li>
+          <li>Publish the first mechanic: Falcon Rush DPS comparison with neutral points.</li>
+        </ol>
+      </section>
+    </article>
+
+    <div class="foot">
+      <span>© <span id="y"></span> <strong>j-_</strong></span>
+      <span>Kez Math · Ongoing research notes</span>
+    </div>
+  </div>
+
+  <script>
+    const d = new Date();
+    document.getElementById('y').textContent = d.getFullYear();
+    document.getElementById('date').textContent =
+      d.toLocaleDateString(undefined, {year:'numeric', month:'long', day:'numeric'});
+  </script>
+</body>
+</html>
